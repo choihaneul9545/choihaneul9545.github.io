@@ -119,6 +119,10 @@
     navbarMenuBar.addEventListener('click', (e) => {
       navbarMenu.classList.toggle('open')
     })
+
+    navbarMenu.addEventListener('click', () => {
+      navbarMenu.classList.remove('open')
+    })
   </script>
   </body>
 </html>
