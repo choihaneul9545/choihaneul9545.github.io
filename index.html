@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>introduce myself</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/1bb67e1c80.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav id="navbar">
+      <div class="navbar__logo">
+        <img src="logo1.png" alt="logo" />
+      </div>
+      <div class="navbar__menu">
+        <ul class="navbar__menu">
+          <li class="navbar__menu__item" data-link="#home">Home</li>
+          <li class="navbar__menu__item" data-link="#about">About</li>
+          <li class="navbar__menu__item" data-link="#skills">Skills</li>
+          <li class="navbar__menu__item" data-link="#contact">Contact</li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Home -->
+    <section id="home">
+      <div class="home__container">
+        <img src="profile.png" alt="profile" />
+        <div class="home__desc">
+            <h1>Hi I'm Haneul </br>I'm Front-end Developer</h1>
+        </div>
+      </div>
+    </section>
+    <!-- About -->
+    <section id="about">
+      <div class="about__container">
+        <h1>About</h1>
+        <h2>About Me</h2>
+        <div class="about__desc">
+          <div class="about__desc_item">
+            <div class="about__desc__icon"><i class="fas fa-book-reader"></i></div>
+            <div class="about__desc_p">책을 좋아합니다</div>
+          </div>
+          <div class="about__desc_item">
+            <div class="about__desc__icon"><i class="fas fa-paint-brush"></i></div>
+            <div class="about__desc_p">디자인에 관심이 많습니다</div>
+          </div>
+          <div class="about__desc_item">
+            <div class="about__desc__icon"><i class="fas fa-plus"></i></div>
+            <div class="about__desc_p">새로운 도전을 좋아합니다</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Skills -->
+    <section id="skills">
+      <div class="skills__container">
+        <h1>Skills</h1>
+        <h2>My skills</h2>
+        <div class="skills__desc">
+          <!-- skill icons -->
+          <div class="skills__desc__left">
+            <div class="left__icon"><i class="fab fa-html5"></i></div>
+            <div class="left__icon"><i class="fab fa-css3-alt"></i></div>
+            <div class="left__icon"><i class="fab fa-js-square"></i></div>
+            <div class="left__icon"><i class="fab fa-react"></i></div>
+          </div>
+          <!-- skill center line -->
+          <div class="skills__desc__line">
+            <div class="center__line"></div>
+            <div class="center__line"></div>
+            <div class="center__line"></div>
+            <div class="center__line"></div>
+          </div>
+          <!-- skill desc -->
+          <div class="skills__desc__right">
+            <div class="right__percent">70%</div>
+            <div class="right__percent">60%</div>
+            <div class="right__percent">35%</div>
+            <div class="right__percent">5%</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact -->
+    <section id="contact">
+      <div class="contact__container">
+        <h1>Contact Me</h1>
+        <ul class="contact__email">
+          <li class="contact__email__icon"><i class="fas fa-envelope"></i></li>
+          <li class="contact__email__icon">trooioi9545@gmail.com</li>
+        </ul>
+      </div>
+    </section>
+    <!-- script page -->
+  <script>
+    // Handle scrolling when tapping on the navbar menu
+    const navbarMenu = document.querySelector('.navbar__menu');
+    navbarMenu.addEventListener('click', (event) => {
+      console.log(event.target.dataset.link);
+      const target = event.target;
+      const link = target.dataset.link;
+      if(link == null) {
+        return;
+      } 
+      console.log(event.target.dataset.link);
+      const scrollTo = document.querySelector(link);
+      scrollTo.scrollIntoView();
+    })
+
+  </script>
+  </body>
+</html>
