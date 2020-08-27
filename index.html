@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>introduce myself</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Do+Hyeon&display=swap"
+    rel="stylesheet"
+  />
     <script
       src="https://kit.fontawesome.com/1bb67e1c80.js"
       crossorigin="anonymous"
@@ -22,6 +26,7 @@
           <li class="navbar__menu__item" data-link="#about">About</li>
           <li class="navbar__menu__item" data-link="#skills">Skills</li>
           <li class="navbar__menu__item" data-link="#contact">Contact</li>
+          <li class="navbar__menu__item" data-link="#todo"><a href="todo.html">My Todo</a></li>
         </ul>
       </div>
       <div class="navbar__menu__bar">
@@ -88,6 +93,7 @@
         </div>
       </div>
     </section>
+
     <!-- Contact -->
     <section id="contact">
       <div class="contact__container">
@@ -99,30 +105,6 @@
       </div>
     </section>
     <!-- script page -->
-  <script>
-    // Handle scrolling when tapping on the navbar menu
-    const navbarMenu = document.querySelector('.navbar__menu');
-    navbarMenu.addEventListener('click', (event) => {
-      console.log(event.target.dataset.link);
-      const target = event.target;
-      const link = target.dataset.link;
-      if(link == null) {
-        return;
-      } 
-      console.log(event.target.dataset.link);
-      const scrollTo = document.querySelector(link);
-      scrollTo.scrollIntoView();
-    })
-
-    const navbarMenuBar = document.querySelector('.navbar__menu__bar');
-
-    navbarMenuBar.addEventListener('click', (e) => {
-      navbarMenu.classList.toggle('open')
-    })
-
-    navbarMenu.addEventListener('click', () => {
-      navbarMenu.classList.remove('open')
-    })
-  </script>
+  <script src="main.js"></script>
   </body>
 </html>
