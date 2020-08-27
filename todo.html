@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link rel="stylesheet" href="todoStyle.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Do+Hyeon&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">My Todo List</h1>
+      <div class="todoList__box">
+        <div class="todoList__btn">
+          <button class="newBtn" value="new">Create New Button</button>
+        </div>
+        <form class="todoList__form">
+          <input
+            class="todoList__input"
+            type="text"
+            placeholder="Write a to do"
+          />
+          <button type="submit">확인</button>
+        </form>
+        <ul class="todoList__list"></ul>
+      </div>
+    </div>
+    <script src="todo.js"></script>
+  </body>
+</html>
